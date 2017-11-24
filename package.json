@@ -7,6 +7,7 @@
   "author": "https://github.com/rongierlach",
   "license": "GPL-3.0",
   "dependencies": {
+    "bluebird": "^3.5.1",
     "gh-pages": "^1.1.0"
   }
 }
