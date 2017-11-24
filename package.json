@@ -6,6 +6,9 @@
   "repository": "https://github.com/rongierlach/gatsby-plugin-github-pages",
   "author": "https://github.com/rongierlach",
   "license": "GPL-3.0",
+  "scripts": {
+    "lint": "standard | snazzy"
+  },
   "dependencies": {
     "bluebird": "^3.5.1",
     "gh-pages": "^1.1.0"
@@ -16,5 +19,8 @@
     "standard": "^10.0.3",
     "webpack": "^3.8.1",
     "webpack-node-externals": "^1.6.0"
+  },
+  "pre-commit": {
+    "lint"
   }
 }
