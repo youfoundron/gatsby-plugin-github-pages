@@ -9,5 +9,12 @@
   "dependencies": {
     "bluebird": "^3.5.1",
     "gh-pages": "^1.1.0"
+  },
+  "devDependencies": {
+    "pre-commit": "^1.2.2",
+    "snazzy": "^7.0.0",
+    "standard": "^10.0.3",
+    "webpack": "^3.8.1",
+    "webpack-node-externals": "^1.6.0"
   }
 }
