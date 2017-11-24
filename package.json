@@ -5,5 +5,8 @@
   "main": "index.js",
   "repository": "https://github.com/rongierlach/gatsby-plugin-github-pages",
   "author": "https://github.com/rongierlach",
-  "license": "GPL-3.0"
+  "license": "GPL-3.0",
+  "dependencies": {
+    "gh-pages": "^1.1.0"
+  }
 }
