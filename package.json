@@ -20,7 +20,7 @@
     "webpack": "^3.8.1",
     "webpack-node-externals": "^1.6.0"
   },
-  "pre-commit": {
+  "pre-commit": [
     "lint"
-  }
+  ]
 }
