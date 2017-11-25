@@ -1099,6 +1099,13 @@ function-bind@^1.0.2, function-bind@^1.1.0, function-bind@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/function-bind/-/function-bind-1.1.1.tgz#a56899d3ea3c9bab874bb9773b7c5ede92f4895d"
 
+gatsby-plugin-github-pages@^0.0.0:
+  version "0.0.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-github-pages/-/gatsby-plugin-github-pages-0.0.0.tgz#d7bd47f69b3b708d400fec508dd228eddcf86460"
+  dependencies:
+    bluebird "^3.5.1"
+    gh-pages "^1.1.0"
+
 gauge@~2.7.3:
   version "2.7.4"
   resolved "https://registry.yarnpkg.com/gauge/-/gauge-2.7.4.tgz#2c03405c7538c39d7eb37b317022e325fb018bf7"
