@@ -12,8 +12,7 @@
   },
   "dependencies": {
     "bluebird": "^3.5.1",
-    "gh-pages": "^1.1.0",
-    "rimraf": "^2.6.2"
+    "gh-pages": "^1.1.0"
   },
   "devDependencies": {
     "pre-commit": "^1.2.2",
