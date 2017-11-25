@@ -7,7 +7,8 @@
   "author": "https://github.com/rongierlach",
   "license": "GPL-3.0",
   "scripts": {
-    "lint": "standard | snazzy"
+    "lint": "standard | snazzy",
+    "build": "webpack"
   },
   "dependencies": {
     "bluebird": "^3.5.1",
