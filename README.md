@@ -5,6 +5,7 @@ A Gatsby plugin that deploys your build to Github Pages.
 `$ npm install gatsby-plugin-github-pages`
 
 ## Usage
+Place the plugin *last* in your plugins array.  
 In your `gatsby-config.js` file:
 ```javascript
 module.exports = {
@@ -18,7 +19,8 @@ module.exports = {
           src: '**/*',
           branch: 'gh-pages',
           dest: '.',
-          repo: 'https://example.com/other/repo.git'
+          repo: 'https://example.com/other/repo.git',
+          message: 'Updates'
           // ...
         }
       }
