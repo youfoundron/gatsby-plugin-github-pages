@@ -8,7 +8,9 @@
   "license": "GPL-3.0",
   "scripts": {
     "lint": "standard | snazzy",
-    "build": "webpack"
+    "build": "webpack",
+    "clean": "rimraf gatsby-node.js",
+    "pre-publish": "npm run clean && npm run build"
   },
   "dependencies": {
     "bluebird": "^3.5.1",
