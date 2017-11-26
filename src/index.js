@@ -1,40 +1,47 @@
 const { URL } = require('url')
-const { rimraf } = require('rimraf')
+const rimraf = require('rimraf')
 const { resolve } = require('path')
 const { publish } = require('gh-pages')
 const { writeFile } = require('fs')
 const { promisify } = require('bluebird')
+const report = require('gatsby-cli/lib/reporter')
 
 const publishAsync = promisify(publish)
 const writeFileAsync = promisify(writeFile)
 const rimrafAsync = promisify(rimraf)
 
-const publicDir = resolve(__dirname, 'public')
-const CNAMEPath = resolve(publicDir, 'CNAME')
+function reportFailure (msg, err) {
+  report.log(``)
+  report.panic(msg, err)
+}
 
 exports.onPostBuild = async function (_, pluginOptions, cb) {
+  const rootPath = resolve('public')
+  const CNAMEPath = resolve(rootPath, 'CNAME')
   const { customDomain, publishOptions } = pluginOptions
 
-  // add a CNAME file to ./public
-  // https://help.github.com/articles/troubleshooting-custom-domains/#the-cname-file-isnt-properly-formatted
-  if (customDomain) {
-    const { hostname } = new URL(customDomain)
-    await writeFileAsync(CNAMEPath, hostname)
-  }
+  let activity
+  activity = report.activityTimer(`Deploying to GitHub Pages`)
+  activity.start()
 
-  // publish the site to github pages
-  // https://github.com/tschaub/gh-pages#options
   try {
-    await publishAsync(publicDir, publishOptions)
+    // add a CNAME file to ./public
+    // https://help.github.com/articles/troubleshooting-custom-domains/#the-cname-file-isnt-properly-formatted
+    if (customDomain) {
+      const { hostname } = new URL(customDomain)
+      await writeFileAsync(CNAMEPath, hostname)
+    }
+    // publish the site to github pages
+    // https://github.com/tschaub/gh-pages#options
+    await publishAsync(rootPath, publishOptions)
+    // remove the CNAME file from ./public
+    // https://github.com/isaacs/rimraf
+    await rimrafAsync(CNAMEPath)
   } catch (err) {
-    console.error(err)
-    throw new Error('Deploy to GitHub Pages was unsuccessful')
+    reportFailure('Deploying to GitHub Pages failed', err)
   }
-
-  // remove the CNAME file from ./public
-  // https://github.com/isaacs/rimraf
-  await rimrafAsync(CNAMEPath)
 
   // continue plugin execution
+  activity.end()
   return cb()
 }
