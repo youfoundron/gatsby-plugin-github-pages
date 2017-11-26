@@ -1,6 +1,6 @@
 {
   "name": "gatsby-plugin-github-pages",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "description": "Gatsby plugin that deploys to Github Pages post-build.",
   "main": "index.js",
   "repository": "https://github.com/rongierlach/gatsby-plugin-github-pages",
