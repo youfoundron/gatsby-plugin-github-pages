@@ -12,10 +12,10 @@
   },
   "dependencies": {
     "bluebird": "^3.5.1",
+    "gatsby-cli": "^1.1.23",
     "gh-pages": "^1.1.0"
   },
   "devDependencies": {
-    "gatsby-plugin-github-pages": "^0.0.0",
     "pre-commit": "^1.2.2",
     "snazzy": "^7.0.0",
     "standard": "^10.0.3",
