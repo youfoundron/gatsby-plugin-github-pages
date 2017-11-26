@@ -3035,9 +3035,9 @@ gatsby-module-loader@^1.0.8:
     babel-runtime "^6.26.0"
     loader-utils "^0.2.16"
 
-gatsby-plugin-github-pages@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-github-pages/-/gatsby-plugin-github-pages-0.1.0.tgz#894432e8c9c46da8bb9505b4fc1a85426078d1a6"
+gatsby-plugin-github-pages@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-github-pages/-/gatsby-plugin-github-pages-1.0.0.tgz#8b4c8d0638d2cf87c21bc6332d58e2a2ab6545d1"
   dependencies:
     bluebird "^3.5.1"
     gatsby-cli "^1.1.23"
