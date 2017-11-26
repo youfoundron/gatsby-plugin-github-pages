@@ -1,4 +1,6 @@
 # Gatsby Plugin GitHub Pages
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+ [![npm version](https://badge.fury.io/js/gatsby-plugin-github-pages.svg)](https://badge.fury.io/js/gatsby-plugin-github-pages) [![dependencies Status](https://david-dm.org/rongierlach/gatsby-plugin-github-pages/status.svg)](https://david-dm.org/rongierlach/gatsby-plugin-github-pages) [![devDependencies Status](https://david-dm.org/rongierlach/gatsby-plugin-github-pages/dev-status.svg)](https://david-dm.org/rongierlach/gatsby-plugin-github-pages?type=dev)  
 A Gatsby plugin that deploys your public folder to Github Pages on build.  
 
 With no configuration the destination is root to a `gh-pages` branch on the current repository.  
