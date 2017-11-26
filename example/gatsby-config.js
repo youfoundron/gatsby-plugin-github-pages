@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: '/gatsby-plugin-github-pages',
   siteMetadata: {
     title: `Gatsby Default Starter`,
   },
