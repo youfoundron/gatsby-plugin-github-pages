@@ -10,7 +10,7 @@
     "lint": "standard | snazzy",
     "build": "webpack",
     "clean": "rimraf gatsby-node.js",
-    "pre-publish": "npm run clean && npm run build"
+    "prepublish": "npm run clean && npm run build"
   },
   "dependencies": {
     "bluebird": "^3.5.1",
