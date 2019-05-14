@@ -6,6 +6,10 @@
   "repository": "https://github.com/rongierlach/gatsby-plugin-github-pages",
   "author": "https://github.com/rongierlach",
   "license": "GPL-3.0",
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin",
+  ],
   "scripts": {
     "lint": "standard | snazzy",
     "build": "webpack",
